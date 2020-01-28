@@ -1,28 +1,10 @@
-<!doctype html>
-<head>
-<script>
-function count() {
-    var search = window.location.search.substr(1);
-    if (search.indexOf('&') !== -1) {
-        var code = search.split('&');
-        var obj = {};
-        for (v of code) {
-            let v2 = v.split('=');
-            obj[v2[0]] = v2[1];
-        }
-        return obj;
-    } else {
-        var code = search.split('=');
-        let obj = {};
-        obj[code[0]] = code[1];
-        return obj;
-    }
-}
+[MAIN]
+branch=origin
+osver=2020.1
+SoftUpdateDate=2020.1
 
-var text = count();
-</script>
-<title>Software Packges</title>
-</head>
-<body>
+[Software]
+Count=1
 
-</body>
+[wget]
+ref=https://github.00010blog.tk/packges-repository/
