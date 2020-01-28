@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+<script>
+function count() {
+    var search = window.location.search.substr(1);
+    if (search.indexOf('&') !== -1) {
+        var code = search.split('&');
+        var obj = {};
+        for (v of code) {
+            let v2 = v.split('=');
+            obj[v2[0]] = v2[1];
+        }
+        return obj;
+    } else {
+        var code = search.split('=');
+        let obj = {};
+        obj[code[0]] = code[1];
+        return obj;
+    }
+}
+
+var text = count();
+</script>
+<title>Software Packges</title>
+</head>
+<body>
+
+</body>
